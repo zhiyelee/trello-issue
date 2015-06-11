@@ -2,11 +2,14 @@ var koa = require('koa');
 var router = require('koa-router')();
 var bodyParser = require('koa-bodyparser');
 var accesslog = require('koa-accesslog');
+var util = require('./lib/util');
 
 var app = koa();
 
 app.use(bodyParser());
 app.use(accesslog());
+
+var TYPE_CREATE = 'createCard';
 
 router.head('/callback', function *(next) {
     this.body = 'You get the trello callback';
@@ -14,9 +17,14 @@ router.head('/callback', function *(next) {
 });
 router.post('/callback', function *(next) {
     var ctx = this,
-        data = ctx.request.body;
-    console.log(data);
-    this.body = data.action;
+        action = ctx.request.body.action,
+        card = action.data.card;
+
+    if (action.type === TYPE_CREATE) {
+        this.body = yield util.updateName(card);
+    } else {
+        this.body = '#' + card.id + ' --- ' + action.type;
+    }
     yield next;
 })
 
