@@ -1,6 +1,6 @@
 # Trello Issue
 
-[Webhook](https://trello.com/docs/gettingstarted/webhooks.html) for Trello Board, auto prepend issue number to new-created card.
+[Webhook](https://trello.com/docs/gettingstarted/webhooks.html) for Trello Board, auto prepend issue number to the new-created cards, such as `#11`.
 
 ## Installation
 
