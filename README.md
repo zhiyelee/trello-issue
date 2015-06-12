@@ -21,12 +21,12 @@ http -v POST https://trello.com/1/tokens/{OAUTH_TOKEN}/webhooks/\?key\={APP_KEY}
 ```
 
 Arguments description:
-* OAUTH_TOKEN   Authorization token which you get from the last step.
-* APP_KEY   Your application key
-* BOARD_ID   The id of the board which you want to monitor.
-* YOUR_DOMAIN   Replace with your domain which you deploy this webhook
+* __OAUTH_TOKEN__   Authorization token which you get from the last step.
+* __APP_KEY__   Your application key
+* __BOARD_ID__   The id of the board which you want to monitor.
+* __YOUR_DOMAIN__   Replace with your domain which you deploy this webhook. Note you should not change the `/callback` path.
 
-### Config
+### Configuration
 
 Copy `conf/conf.sample.json` to `conf/conf.json`, add replace the placeholder with your key and token.
 
@@ -36,4 +36,4 @@ Use `node --harmony index.js` OR any other tools like [PM2](https://github.com/U
 
 
 ## LICENCE
-MIT
+MIT LICENCE
