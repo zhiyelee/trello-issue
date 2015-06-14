@@ -31,11 +31,31 @@ Arguments description:
 ### Configuration
 
 ```bash
-npm i
-
 make
-# conf/conf.json    open and replace the placeholder with your key and oauth token
-# conf/db.json      The `current` property is the start number which the webhook service will use
+
+# use your prefer editor to edit the config file
+vim conf/config.yml
+```
+
+About the config file, you can custom below attributes:
+
+```yaml
+# The default prefix looks like below, based on the default config
+#   '#TASK0001', '#TASK1101'
+
+# Total length of numbers, exclude prefix
+#   eg:
+#     4 -- 0001
+#     4 -- 0123
+#     3 -- 001
+#
+numbersLength: 4
+
+# Start number, start from which the app generates issue number
+startNumber: 1
+
+# Prefix of the issue number, any string you want, such as `#TASK`
+prefix: '#'
 ```
 
 
@@ -50,4 +70,4 @@ pm2 start index.js --name trello-issue
 
 
 ## LICENCE
-MIT LICENCE
+ISC LICENCE

@@ -1,0 +1,22 @@
+# application key
+appKey: "YOUR_APPLICATION_KEY"
+
+#oauth Token
+oauthToken: "YOUR_OAUTH_TOKEN"
+
+# The default prefix looks like below, based on the default config
+#   '#TASK0001', '#TASK1101'
+
+# Total length of numbers, exclude prefix
+#   eg:
+#     4 -- 0001
+#     4 -- 0123
+#     3 -- 001
+#
+numbersLength: 4
+
+# Start number, start from which the app generates issue number
+startNumber: 1
+
+# Prefix of the issue number, any string you want, such as `#TASK`
+prefix: '#'

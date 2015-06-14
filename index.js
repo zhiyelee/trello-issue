@@ -26,12 +26,12 @@ router.post('/callback', function *(next) {
         this.body = '#' + card.id + ' --- ' + action.type;
     }
     yield next;
-})
+});
 
 router.get('/', function *(next) {
     this.body = '<h1> Trello Webhook Server</h1>';
     yield next;
-})
+});
 
 app.use(router.routes());
 

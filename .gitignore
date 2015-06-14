@@ -1,6 +1,4 @@
 node_modules
-conf.json
-config.json
-data.json
-trello.js
+.idea
 conf/db.json
+conf/conf.yml

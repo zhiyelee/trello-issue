@@ -1,4 +1,9 @@
-config: conf/conf.sample.json conf/conf.sample.json
-	test -s conf/db.json || cp conf/db.sample.json conf/db.json
-	test -s conf/conf.json || cp conf/conf.sample.json conf/conf.json
+all: npm config
+
+npm:
+	npm install
+config: conf/config.sample.yml
+	test -s conf/config.yml || cp conf/config.sample.yml conf/config.yml
+
+.PHONY: config npm all
 
