@@ -2,6 +2,8 @@
 
 [Webhook](https://trello.com/docs/gettingstarted/webhooks.html) for Trello Board, auto prepend issue number to the new-created cards, such as `#11`.
 
+![trello Issue Demo](https://github.com/zhiyelee/trello-issue/raw/master/trello-issue.gif)
+
 ## Installation
 
 ### Getting your key and token
